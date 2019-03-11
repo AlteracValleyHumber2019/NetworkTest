@@ -23,7 +23,7 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DataBaseConnection.cpp">
+    <ClCompile Include="DataCon1.1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
