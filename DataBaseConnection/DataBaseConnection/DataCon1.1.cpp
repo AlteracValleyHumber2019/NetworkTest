@@ -2,9 +2,11 @@
 //
 
 #include "pch.h"
+#include <conio.h>
 #include <mysql.h>
 #include <iostream>
 #include <string>
+
 
 using namespace std;
 int qstate;
@@ -34,18 +36,49 @@ int main()
 			string user;
 			cin >> user;
 
-			cout << "Enter your Password : ";
-			string pass;
-			cin >> pass;
 
+			string pass = "";
+			char ch;
+			cout << "Enter your Password : ";
+			ch = _getch();
+
+			//Character 13 is the enter key
+			while (ch != 13) {
+				if (ch != 8)
+				{
+					pass.push_back(ch);
+					cout << '*';
+					ch = _getch();
+				}
+				else
+				{
+					if (pass.size() >= 1)
+					{
+						pass = pass.substr(0, pass.size() - 1);
+						cout << "\b \b";
+						ch = _getch();
+					}
+					else
+						ch = _getch();
+				}
+			}
+
+			//We are using SHA256 encryption on the website.
+			//TODO: Encrypt the password
+
+			cout << endl;
+
+			//Prints out the query sent to the server for reference purposes
 			string query1 = "SELECT * FROM players WHERE (player_name = '" + user + "') OR (player_email = '" + user + "')";
 			cout << "Query from the server : " + query1 << endl;
 			system("PAUSE");
 
 			const char* q1 = query1.c_str();
 
+			//Creates the query state
 			qstate = mysql_query(conn, q1);
 
+			//If it's a valid query
 			if (!qstate)
 			{
 				res = mysql_store_result(conn);
@@ -55,18 +88,22 @@ int main()
 				{
 					//We will get only 1 line as a result
 					//Data is stored as... ID, name, pass, email
+					//TODO: Compare the hashed value
 					if (pass == row[2])
+					{
 						cout << "Connected to the server succesfully under : " + user + " !" << endl;
+						connected = true;
+					}
 					else
 						cout << "Incorrect password, try again" << endl;
 
-
+					//Will retry unless connection is succesful
 					system("PAUSE");
-					connected = true;
 					
 				}
 				else
 				{
+					//User not found in database
 					cout << "Could not find username or email in the database... ";
 					system("PAUSE");
 				}
@@ -74,11 +111,12 @@ int main()
 
 		}
 
-		//A normal SQL query
 
 		cout << "Now dumping database..." << endl;
 		system("PAUSE");
 		system("CLS");
+
+		//Dumps the entire database for reference purposes
 		string query = "SELECT * FROM players";
 		const char* q = query.c_str();
 
@@ -93,12 +131,12 @@ int main()
 		}
 		else
 		{
-			//Request failed, table not existant or query incorrect
+			//Request failed, table not existant or query incorrect | Acts similar to a try catch
 			cout << "Query failed: " << mysql_error(conn) << endl;
 		}
 	}
 	else {
-		//Connection failed
+		//Connection failed, problem seeing the database
 		puts("Database connection failed - Please contact an admin");
 	}
 
