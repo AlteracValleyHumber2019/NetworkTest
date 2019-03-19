@@ -32,4 +32,4 @@
 *.app
 
 NetworkTCPServer/.vs/
-NetworkTCPServer/Debug
+NetworkTCPServer/Debug/
