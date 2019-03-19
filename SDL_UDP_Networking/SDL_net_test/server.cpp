@@ -9,23 +9,19 @@ int main(int argc, char **argv)
 	
 	std::string IP;
 	int32_t localPort = 0;
-	int32_t remotePort = 0;
+	int32_t remotePort = 8697;
 
 	std::cout
 		<< "\n==========================================================================================================\n"
-		<< "UDP connection - A simple test for UDP connections using SDL_Net!"
+		<< "\t\tUDP Server"
 		<< "\n==========================================================================================================\n"
-		<< "You'll be asked to enter the following :"
-		<< "\n\tRemote IP   : The IP you want to connect to"
-		<< "\n\tRemote Port : The port you want to connect to"
-		<< "\n\tLocal port  : Your port"
+		<< "\tRemote IP   : The IP you want to connect to"
+		<< "\n\tLocal port  : Server port"
 		<< "\nLocal port should be the same as remote port on the other instance of the application"
 		<< "\n==========================================================================================================\n\n";
 
 	std::cout << "Enter remote IP ( 127.0.0.1  for local connections ) : ";
 	std::cin >> IP;
-	std::cout << "...and remote port : ";
-	std::cin >> remotePort;
 
 	std::cout << "Enter local port : ";
 	std::cin >> localPort;

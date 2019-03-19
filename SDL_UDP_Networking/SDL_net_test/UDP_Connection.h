@@ -6,6 +6,9 @@
 #include <iostream>
 #include <sstream>
 
+#include "User.h"
+#include <windows.h>
+
 struct UDPConnection
 {
 	UDPConnection()
@@ -17,6 +20,9 @@ struct UDPConnection
 		SDLNet_FreePacket(packet);
 		SDLNet_Quit();
 	}
+
+	//local port -> server where the client connects
+	//remote port -> the local port on the server which the client connects to
 	bool Init(const std::string &ip, int32_t remotePort, int32_t localPort)
 	{
 		std::cout << "Connecting to \n\tIP : " << ip << "\n\tPort : " << remotePort << std::endl;
@@ -104,6 +110,8 @@ struct UDPConnection
 	// Send data. 
 	bool Send(const std::string &str)
 	{
+		if (str == "quit")
+			quit = true;
 		// Set the data
 		// UDPPacket::data is an Uint8, which is similar to char*
 		// This means we can't set it directly.
@@ -112,17 +120,30 @@ struct UDPConnection
 		// We can extract any data from a std::stringstream using >> ( like std::cin )
 		//
 		//str
-		std::cout << "Type a message and hit enter\n";
-		std::string msg = "";
-		std::cin.ignore();
-		std::getline(std::cin, msg);
+		std::cout << "Username: ";
+		std::string username;
+		std::cin >> username;
 
-  		memcpy(packet->data, msg.c_str(), msg.length());
-		packet->len = msg.length();
+		std::cout << "Password: ";
+		std::string password;
+		std::cin >> password;
+
+		std::cout << "Level: ";
+		int level;
+		std::cin >> level;
+
+		User *user = new User(username, password, level);
+
+		user->print();
+
+		//packet->data = user->getUsername().c_str();
+
+  		memcpy(packet->data, user->getUsername().c_str(), user->getUsername().length());
+		packet->len = user->getUsername().length();
 
 		std::cout
 			<< "==========================================================================================================\n"
-			<< "Sending : \'" << str << "\', Length : " << packet->len << "\n";
+			<< "Sending : \'" << packet->data << "\', Length : " << packet->len << "\n";
 
 		// Send
 		// SDLNet_UDP_Send returns number of packets sent. 0 means error
@@ -136,17 +157,13 @@ struct UDPConnection
 		std::cout << "\tSuccess!\n"
 			<< "==========================================================================================================\n";
 
-		if (str == "quit")
-			quit = true;
+		
 		return true;
 	}
 	void CheckForData()
 	{
-		std::cout
-			<< "==========================================================================================================\n"
-			<< "Check for data...\n";
-
-		// Check t see if there is a packet wauting for us...
+		std::cout << "\nCHECKING DATA:\n";
+		// Check to see if there is a packet waiting for us...
 		if (SDLNet_UDP_Recv(ourSocket, packet))
 		{
 			std::cout << "\tData received : " << packet->data << "\n";
@@ -155,10 +172,6 @@ struct UDPConnection
 			if (strcmp((char *)packet->data, "quit") == 0)
 				quit = true;
 		}
-		else
-			std::cout << "\tNo data received!\n";
-
-		std::cout << "==========================================================================================================\n";
 	}
 	bool WasQuit()
 	{
