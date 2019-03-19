@@ -4,6 +4,8 @@
 // CLIENT MAIN //
 /////////////////
 
+//Mike's Network
+
 int main(int argc, char* argv[])
 {
 	// Mike: Create a client 
