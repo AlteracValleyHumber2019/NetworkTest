@@ -1,2 +1,4 @@
-﻿  server.cpp
-  NetworkTest.vcxproj -> D:\HUMBER\_Humber_Winter_2019\Obj-Oriented Analysis & Design - GAME-253-0NB\AlteracValleyHumber2019\NetworkTest\NetworkTCPServer\Debug\NetworkTest.exe
+﻿  TCP_Server.cpp
+  main.cpp
+  Generating Code...
+LINK : fatal error LNK1104: cannot open file 'SDL2.lib'
