@@ -5,8 +5,4 @@ c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock.h(303): w
   c:\users\raksha\documents\github\networktest\networktestserverv2\sdk\sdl_net\include\sdl_net.h(111): note: see previous definition of 'INADDR_BROADCAST'
 c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock.h(304): warning C4005: 'INADDR_NONE': macro redefinition
   c:\users\raksha\documents\github\networktest\networktestserverv2\sdk\sdl_net\include\sdl_net.h(105): note: see previous definition of 'INADDR_NONE'
-  sha256.cpp
-c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\sha256.cpp(124): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
-  TCP_Server.cpp
-  Generating Code...
   NetworkTest.vcxproj -> C:\Users\Raksha\Documents\GitHub\NetworkTest\NetworkTestServerV2\x64\Debug\NetworkTest.exe
