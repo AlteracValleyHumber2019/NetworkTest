@@ -6,6 +6,7 @@
 #include <mysql.h>
 #include <iostream>
 #include <string>
+#include "sha256.h"
 
 
 using namespace std;
@@ -139,6 +140,11 @@ int main()
 		//Connection failed, problem seeing the database
 		puts("Database connection failed - Please contact an admin");
 	}
+
+	string input = "123456";
+	string output1 = sha256(input);
+
+	cout << "sha256('" << input << "'):" << output1 << endl;
 
 	return 0;
 }
