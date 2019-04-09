@@ -6,12 +6,106 @@
 #include <iostream>
 #include <string>
 #include "sha256.h"
+#include "DataBaseConnection.h"
 
 using namespace std;
 int qstate;
 
 int main()
 {
+	bool DBsuccess = true;
+	DataBaseConnection dbcon = new DataBaseConnection(DBsuccess);
+
+	if (DBsuccess)
+	{
+		bool connected = false;
+		while (!connected)
+		{
+			system("CLS");
+
+			cout << "Enter your Username OR Email : ";
+			string user;
+			cin >> user;
+
+
+			string pass = "";
+			char ch;
+			cout << "Enter your Password : ";
+			ch = _getch();
+
+			//Character 13 is the enter key
+			while (ch != 13) {
+				if (ch != 8)
+				{
+					pass.push_back(ch);
+					cout << '*';
+					ch = _getch();
+				}
+				else
+				{
+					if (pass.size() >= 1)
+					{
+						pass = pass.substr(0, pass.size() - 1);
+						cout << "\b \b";
+						ch = _getch();
+					}
+					else
+						ch = _getch();
+				}
+			}
+
+			//We are using SHA256 encryption on the website.
+			//TODO: Encrypt the password
+
+			cout << endl;
+
+			//Prints out the query sent to the server for reference purposes
+			string query1 = "SELECT * FROM players WHERE (player_name = '" + user + "') OR (player_email = '" + user + "')";
+			cout << "Query from the server : " + query1 << endl;
+			system("PAUSE");
+
+			MYSQL_RES* res = dbcon.fetchInformation(query1);
+			MYSQL_ROW row;
+
+			//row will be FALSE if no result is found
+			if (row = mysql_fetch_row(res))
+			{
+				//We will get only 1 line as a result
+				//Data is stored as... ID, name, pass, email
+				//TODO: Compare the hashed value
+				if (pass == row[2])
+				{
+					cout << "Connected to the server succesfully under : " + user + " !" << endl;
+					connected = true;
+				}
+				else
+					cout << "Incorrect password, try again" << endl;
+
+				//Will retry unless connection is succesful
+				system("PAUSE");
+
+			}
+			else
+			{
+				//User not found in database
+				cout << "Could not find username or email in the database... ";
+				system("PAUSE");
+			}
+			
+
+		}
+
+	}
+	else
+	{
+		cout << "Terminating Program, connection not established | Contact an administrator" << endl;
+	}
+
+	//---------------------------------------------------------
+	//-- Non-classed version of the database connection (OLD)
+	//---------------------------------------------------------
+
+	/*
 	MYSQL* conn;
 	MYSQL_ROW row;
 	MYSQL_RES *res;
@@ -142,7 +236,7 @@ int main()
 	string input = "123456";
 	string output1 = sha256(input);
 
-	cout << "sha256('" << input << "'):" << output1 << endl;
+	cout << "sha256('" << input << "'):" << output1 << endl; */
 
 	return 0;
 }

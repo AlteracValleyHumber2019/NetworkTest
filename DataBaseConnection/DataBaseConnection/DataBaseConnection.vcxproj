@@ -161,9 +161,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DataBaseConnection.h" />
     <ClInclude Include="sha256.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DataBaseConnection.cpp" />
     <ClCompile Include="DataCon1.1.cpp" />
     <ClCompile Include="sha256.cpp" />
   </ItemGroup>
