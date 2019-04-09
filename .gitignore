@@ -33,9 +33,6 @@
 
 NetworkTCPServer/.vs/
 NetworkTCPServer/Debug/
-NetworkTestServerV2/SDK/
-NetworkTestServerV2/.vs/NetworkTest/v15/Browse.VC.opendb
-NetworkTestServerV2/.vs/NetworkTest/v15/Browse.VC.db
-NetworkTestServerV2/.vs/NetworkTest/v15/Solution.VC.db-wal
-NetworkTestServerV2/.vs/NetworkTest/v15/Solution.VC.db-shm
-NetworkTestServerV2/.vs/NetworkTest/v15/Solution.VC.db
+NetworkTestServerV2/.vs/NetworkTest/v15/
+DataBaseConnection/.vs/DataBaseConnection/v15/Browse.VC.db
+DataBaseConnection/.vs/DataBaseConnection/v15/.suo

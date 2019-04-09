@@ -1,13 +1,12 @@
 #ifndef TCP_CLIENT_H  
 #define TCP_CLIENT_H
 
-#include <SDL_net.h>
-#include <iostream>
-#include <cstring>
+#include "Network_Controller.h"
+
 #include <stdio.h>
 #include <thread>
 
-class TCP_Client
+class TCP_Client : public NetworkController
 {
 
 public:
@@ -32,11 +31,7 @@ public:
 
 	void UpdateClient();
 
-
 private:
-	//The IP address of this client
-	IPaddress ip;
-
 	//The port number to connect to
 	int port_client;
 
@@ -48,7 +43,6 @@ private:
 
 	//Boolean that stores the state of this clients connection
 	bool bIsConnected;
-
 };
 
 
