@@ -1,14 +1,9 @@
-﻿  main.cpp
-d:\humber\_humber_winter_2019\obj-oriented analysis & design - game-253-0nb\alteracvalley2019\networktest\networktestserverv2\networktest\tcp_server.h(4): fatal error C1083: Cannot open include file: 'SDL_net.h': No such file or directory
-  TCP_Server.cpp
-d:\humber\_humber_winter_2019\obj-oriented analysis & design - game-253-0nb\alteracvalley2019\networktest\networktestserverv2\networktest\tcp_server.h(4): fatal error C1083: Cannot open include file: 'SDL_net.h': No such file or directory
-  UDP_Server.cpp
-d:\humber\_humber_winter_2019\obj-oriented analysis & design - game-253-0nb\alteracvalley2019\networktest\networktestserverv2\networktest\udp_server.cpp(5): error C2653: 'UDP_Server': is not a class or namespace name
-d:\humber\_humber_winter_2019\obj-oriented analysis & design - game-253-0nb\alteracvalley2019\networktest\networktestserverv2\networktest\udp_server.cpp(6): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-d:\humber\_humber_winter_2019\obj-oriented analysis & design - game-253-0nb\alteracvalley2019\networktest\networktestserverv2\networktest\udp_server.cpp(7): warning C4508: 'UDP_Server': function should return a value; 'void' return type assumed
-d:\humber\_humber_winter_2019\obj-oriented analysis & design - game-253-0nb\alteracvalley2019\networktest\networktestserverv2\networktest\udp_server.cpp(10): error C2523: 'UDP_Server::~UDP_Server': destructor tag mismatch
-d:\humber\_humber_winter_2019\obj-oriented analysis & design - game-253-0nb\alteracvalley2019\networktest\networktestserverv2\networktest\udp_server.cpp(10): error C2510: 'UDP_Server': left of '::' must be a class/struct/union
-d:\humber\_humber_winter_2019\obj-oriented analysis & design - game-253-0nb\alteracvalley2019\networktest\networktestserverv2\networktest\udp_server.cpp(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-d:\humber\_humber_winter_2019\obj-oriented analysis & design - game-253-0nb\alteracvalley2019\networktest\networktestserverv2\networktest\udp_server.cpp(11): error C2084: function 'int UDP_Server(void)' already has a body
-  d:\humber\_humber_winter_2019\obj-oriented analysis & design - game-253-0nb\alteracvalley2019\networktest\networktestserverv2\networktest\udp_server.cpp(5): note: see previous definition of 'UDP_Server'
-  Generating Code...
+﻿  UDP_Server.cpp
+c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(5): error C2653: 'UDP_Server': is not a class or namespace name
+c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(6): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(7): warning C4508: 'UDP_Server': function should return a value; 'void' return type assumed
+c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(10): error C2523: 'UDP_Server::~UDP_Server': destructor tag mismatch
+c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(10): error C2510: 'UDP_Server': left of '::' must be a class/struct/union
+c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(11): error C2084: function 'int UDP_Server(void)' already has a body
+  c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(5): note: see previous definition of 'UDP_Server'

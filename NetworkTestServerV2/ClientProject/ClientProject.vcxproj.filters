@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Hasing">
       <UniqueIdentifier>{9b4b60af-97b9-4701-91ba-95681b55b126}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Database">
+      <UniqueIdentifier>{c9ad0f90-261d-4e62-8b33-c65facb1dec8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Database">
+      <UniqueIdentifier>{77a3cd14-8875-4c36-aec0-d1264116a152}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Network_Controller.h">
@@ -54,6 +60,9 @@
     <ClInclude Include="UDP_Server.h">
       <Filter>Header Files\UDP</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\DataBaseConnection\DataBaseConnection\DataBaseConnection.h">
+      <Filter>Header Files\Database</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -73,6 +82,9 @@
     </ClCompile>
     <ClCompile Include="UDP_Server.cpp">
       <Filter>Source Files\UDP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\DataBaseConnection\DataBaseConnection\DataBaseConnection.cpp">
+      <Filter>Source Files\Database</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
