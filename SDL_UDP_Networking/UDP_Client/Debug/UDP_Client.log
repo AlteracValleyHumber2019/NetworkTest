@@ -5,4 +5,5 @@ c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock.h(303): w
   c:\gamedev\sdl2_net-devel-2.0.1-vc\sdl2_net-2.0.1\include\sdl_net.h(111): note: see previous definition of 'INADDR_BROADCAST'
 c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock.h(304): warning C4005: 'INADDR_NONE': macro redefinition
   c:\gamedev\sdl2_net-devel-2.0.1-vc\sdl2_net-2.0.1\include\sdl_net.h(105): note: see previous definition of 'INADDR_NONE'
-  UDP_Client.vcxproj -> D:\HUMBER\_Humber_Winter_2019\Obj-Oriented Analysis & Design - GAME-253-0NB\SDL_UDP_Networking\Debug\UDP_Client.exe
+  LINK : D:\HUMBER\_Humber_Winter_2019\Obj-Oriented Analysis & Design - GAME-253-0NB\AlteracValley2019\NetworkTest\SDL_UDP_Networking\Debug\UDP_Client.exe not found or not built by the last incremental link; performing full link
+  UDP_Client.vcxproj -> D:\HUMBER\_Humber_Winter_2019\Obj-Oriented Analysis & Design - GAME-253-0NB\AlteracValley2019\NetworkTest\SDL_UDP_Networking\Debug\UDP_Client.exe

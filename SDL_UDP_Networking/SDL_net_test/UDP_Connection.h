@@ -120,26 +120,9 @@ struct UDPConnection
 		// We can extract any data from a std::stringstream using >> ( like std::cin )
 		//
 		//str
-		std::cout << "Username: ";
-		std::string username;
-		std::cin >> username;
 
-		std::cout << "Password: ";
-		std::string password;
-		std::cin >> password;
-
-		std::cout << "Level: ";
-		int level;
-		std::cin >> level;
-
-		User *user = new User(username, password, level);
-
-		user->print();
-
-		//packet->data = user->getUsername().c_str();
-
-  		memcpy(packet->data, user->getUsername().c_str(), user->getUsername().length());
-		packet->len = user->getUsername().length();
+  		memcpy(packet->data, str.c_str(), str.length());
+		packet->len = str.length();
 
 		std::cout
 			<< "==========================================================================================================\n"
@@ -160,28 +143,25 @@ struct UDPConnection
 		
 		return true;
 	}
-	void CheckForData()
+	const char* CheckForData()
 	{
 		std::cout << "\nCHECKING DATA:\n";
 		// Check to see if there is a packet waiting for us...
 		if (SDLNet_UDP_Recv(ourSocket, packet))
 		{
-			std::cout << "\tData received : " << packet->data << "\n";
-
-			// If the data is "quit"
-			if (strcmp((char *)packet->data, "quit") == 0)
-				quit = true;
+			return reinterpret_cast<char*>(packet->data);
 		}
 	}
 	bool WasQuit()
 	{
 		return quit;
 	}
+
+	UDPpacket *packet;
 private:
 	bool quit;
 	UDPsocket ourSocket;
 	IPaddress serverIP;
-	UDPpacket *packet;
 };
 
 #endif //UDP_CONNECTION_H

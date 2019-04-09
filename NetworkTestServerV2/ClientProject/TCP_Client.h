@@ -27,7 +27,7 @@ public:
 
 	void Send(std::string message_);
 
-	int ReceiveMessage();
+	const char* ReceiveMessage();
 
 	void UpdateClient();
 

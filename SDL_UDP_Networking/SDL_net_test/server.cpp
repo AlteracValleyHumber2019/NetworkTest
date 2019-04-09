@@ -8,23 +8,8 @@ int main(int argc, char **argv)
 	UDPConnection udpConnection;
 	
 	std::string IP;
-	int32_t localPort = 0;
+	int32_t localPort = 8697;
 	int32_t remotePort = 8697;
-
-	std::cout
-		<< "\n==========================================================================================================\n"
-		<< "\t\tUDP Server"
-		<< "\n==========================================================================================================\n"
-		<< "\tRemote IP   : The IP you want to connect to"
-		<< "\n\tLocal port  : Server port"
-		<< "\nLocal port should be the same as remote port on the other instance of the application"
-		<< "\n==========================================================================================================\n\n";
-
-	std::cout << "Enter remote IP ( 127.0.0.1  for local connections ) : ";
-	std::cin >> IP;
-
-	std::cout << "Enter local port : ";
-	std::cin >> localPort;
 
 	udpConnection.Init(IP, remotePort, localPort);
 
@@ -42,12 +27,28 @@ int main(int argc, char **argv)
 
 		std::cin >> command;
 
-		if (command == '0')
-			udpConnection.Send("This is a test");
+		if (command == '0') {
+			std::cout << "Username: ";
+			std::string username;
+			std::cin >> username;
+
+			std::cout << "Password: ";
+			std::string password;
+			std::cin >> password;
+
+			std::cout << "Level: ";
+			int level;
+			std::cin >> level;
+
+			User *user = new User(username, password, level);
+
+			udpConnection.Send(user->to_string());
+		}
+
 		else if (command == '1')
 			udpConnection.Send("quit");
 		else if (command == '2')
-			udpConnection.CheckForData();
+			std::cout << udpConnection.CheckForData() << "\n";
 		else
 			std::cout << "Illegal command\n";
 	}

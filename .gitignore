@@ -31,6 +31,8 @@
 *.out
 *.app
 
+*/.vs
+
 NetworkTCPServer/.vs/
 NetworkTCPServer/Debug/
 NetworkTestServerV2/.vs/NetworkTest/v15/

@@ -58,7 +58,7 @@
       <Filter>Header Files\UDP</Filter>
     </ClInclude>
     <ClInclude Include="UDP_Server.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\UDP</Filter>
     </ClInclude>
     <ClInclude Include="..\..\DataBaseConnection\DataBaseConnection\DataBaseConnection.h">
       <Filter>Header Files\Database</Filter>
@@ -81,7 +81,7 @@
       <Filter>Source Files\UDP</Filter>
     </ClCompile>
     <ClCompile Include="UDP_Server.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\UDP</Filter>
     </ClCompile>
     <ClCompile Include="..\..\DataBaseConnection\DataBaseConnection\DataBaseConnection.cpp">
       <Filter>Source Files\Database</Filter>

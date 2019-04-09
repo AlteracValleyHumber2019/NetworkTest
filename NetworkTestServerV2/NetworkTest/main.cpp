@@ -1,12 +1,4 @@
 #include "TCP_Server.h"
-#include <conio.h>
-#include <mysql.h>
-#include <iostream>
-#include <string>
-#include "sha256.h"
-
-using namespace std;
-int qstate;
 
 /////////////////
 // SERVER MAIN //
@@ -38,11 +30,6 @@ int main(int argc, char* argv[])
 			running = false;
 		}
 	}
-
-	// ---------------------------------------
-	// ---------------------------------------
-	// ---------------------------------------
-
 
 	getchar();
 

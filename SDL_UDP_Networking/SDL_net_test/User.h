@@ -48,8 +48,8 @@ public:
 		level = _level;
 	}
 
-	void print() {
-		std::cout << "Username : " << username << "Level : " << level << "\n";
+	std::string to_string() {
+		return "Username : " + username + "Level : " + std::to_string(level);
 	}
 };
 
