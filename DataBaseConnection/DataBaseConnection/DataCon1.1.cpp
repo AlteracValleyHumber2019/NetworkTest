@@ -1,6 +1,3 @@
-// MySqlTest.cpp : Defines the entry point for the console application.
-//
-
 #include <conio.h>
 #include <mysql.h>
 #include <iostream>
@@ -102,7 +99,7 @@ int main()
 	}
 
 	//---------------------------------------------------------
-	//-- Non-classed version of the database connection (OLD)
+	//-- Non-classed version of the database connection (OLD) /
 	//---------------------------------------------------------
 
 	/*
