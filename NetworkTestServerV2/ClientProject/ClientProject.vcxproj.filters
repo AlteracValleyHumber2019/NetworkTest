@@ -13,23 +13,65 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\UDP">
+      <UniqueIdentifier>{b47de68d-aefe-4d18-801b-e72d23020fa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TCP">
+      <UniqueIdentifier>{282003c0-dfb1-4f3e-b2e0-965c310f235f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Hashing">
+      <UniqueIdentifier>{f62f54a7-fade-4a7d-8daa-2527336c61bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UDP">
+      <UniqueIdentifier>{b871dac0-0177-4b7a-bb7b-41137349255b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TCP">
+      <UniqueIdentifier>{1f1924de-8533-4ead-828b-3046c02310e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Hasing">
+      <UniqueIdentifier>{9b4b60af-97b9-4701-91ba-95681b55b126}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TCP_Client.h">
+    <ClInclude Include="Network_Controller.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TCP_Client.h">
+      <Filter>Header Files\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="TCP_Server.h">
+      <Filter>Header Files\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="UDP_Controller.h">
+      <Filter>Header Files\UDP</Filter>
     </ClInclude>
     <ClInclude Include="sha256.h">
+      <Filter>Header Files\Hashing</Filter>
+    </ClInclude>
+    <ClInclude Include="UDP_Client.h">
+      <Filter>Header Files\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="UDP_Server.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TCP_Client.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="sha256.cpp">
+      <Filter>Source Files\Hasing</Filter>
+    </ClCompile>
+    <ClCompile Include="TCP_Client.cpp">
+      <Filter>Source Files\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="TCP_Server.cpp">
+      <Filter>Source Files\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="UDP_Client.cpp">
+      <Filter>Source Files\UDP</Filter>
+    </ClCompile>
+    <ClCompile Include="UDP_Server.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

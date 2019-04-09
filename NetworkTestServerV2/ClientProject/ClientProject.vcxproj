@@ -19,13 +19,21 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Network_Controller.h" />
     <ClInclude Include="sha256.h" />
     <ClInclude Include="TCP_Client.h" />
+    <ClInclude Include="TCP_Server.h" />
+    <ClInclude Include="UDP_Client.h" />
+    <ClInclude Include="UDP_Controller.h" />
+    <ClInclude Include="UDP_Server.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="sha256.cpp" />
     <ClCompile Include="TCP_Client.cpp" />
+    <ClCompile Include="TCP_Server.cpp" />
+    <ClCompile Include="UDP_Client.cpp" />
+    <ClCompile Include="UDP_Server.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

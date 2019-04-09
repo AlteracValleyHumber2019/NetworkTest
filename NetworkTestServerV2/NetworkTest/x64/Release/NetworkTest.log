@@ -1,4 +1,16 @@
-﻿  Generating code
-  All 76 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+﻿  main.cpp
+c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock.h(301): warning C4005: 'INADDR_ANY': macro redefinition
+  c:\users\wells\documents\game programming\winter 2019\g253 - object-oriented analysis\testnetworkrepo\networktestserverv2\sdk\sdl_net\include\sdl_net.h(102): note: see previous definition of 'INADDR_ANY'
+c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock.h(303): warning C4005: 'INADDR_BROADCAST': macro redefinition
+  c:\users\wells\documents\game programming\winter 2019\g253 - object-oriented analysis\testnetworkrepo\networktestserverv2\sdk\sdl_net\include\sdl_net.h(111): note: see previous definition of 'INADDR_BROADCAST'
+c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock.h(304): warning C4005: 'INADDR_NONE': macro redefinition
+  c:\users\wells\documents\game programming\winter 2019\g253 - object-oriented analysis\testnetworkrepo\networktestserverv2\sdk\sdl_net\include\sdl_net.h(105): note: see previous definition of 'INADDR_NONE'
+  sha256.cpp
+c:\users\wells\documents\game programming\winter 2019\g253 - object-oriented analysis\testnetworkrepo\networktestserverv2\networktest\sha256.cpp(124): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  TCP_Server.cpp
+  Generating code
+  74 of 77 functions (96.1%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  NetworkTest.vcxproj -> C:\Users\wells\Documents\Game Programming\Winter 2019\G253 - Object-Oriented Analysis\TestNetwork\NetworkTestServerV2\NetworkTestServerV2\x64\Release\NetworkTest.exe
+  NetworkTest.vcxproj -> C:\Users\wells\Documents\Game Programming\Winter 2019\G253 - Object-Oriented Analysis\TestNetworkRepo\NetworkTestServerV2\x64\Release\NetworkTest.exe
