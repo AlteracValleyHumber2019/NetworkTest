@@ -1,13 +1,11 @@
 // MySqlTest.cpp : Defines the entry point for the console application.
 //
 
-#include "pch.h"
 #include <conio.h>
 #include <mysql.h>
 #include <iostream>
 #include <string>
 #include "sha256.h"
-
 
 using namespace std;
 int qstate;

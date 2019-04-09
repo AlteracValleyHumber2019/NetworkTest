@@ -1,4 +1,8 @@
 ﻿  main.cpp
-  TCP_Client.cpp
-  Generating Code...
-  ClientProject.vcxproj -> C:\Users\wells\Documents\Game Programming\Winter 2019\G253 - Object-Oriented Analysis\TestNetwork\NetworkTestServerV2\NetworkTestServerV2\x64\Debug\ClientProject.exe
+c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock.h(301): warning C4005: 'INADDR_ANY': macro redefinition
+  c:\users\raksha\documents\github\networktest\networktestserverv2\sdk\sdl_net\include\sdl_net.h(102): note: see previous definition of 'INADDR_ANY'
+c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock.h(303): warning C4005: 'INADDR_BROADCAST': macro redefinition
+  c:\users\raksha\documents\github\networktest\networktestserverv2\sdk\sdl_net\include\sdl_net.h(111): note: see previous definition of 'INADDR_BROADCAST'
+c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock.h(304): warning C4005: 'INADDR_NONE': macro redefinition
+  c:\users\raksha\documents\github\networktest\networktestserverv2\sdk\sdl_net\include\sdl_net.h(105): note: see previous definition of 'INADDR_NONE'
+  ClientProject.vcxproj -> C:\Users\Raksha\Documents\GitHub\NetworkTest\NetworkTestServerV2\x64\Debug\ClientProject.exe
