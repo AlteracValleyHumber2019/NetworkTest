@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\DataBaseConnection\DataBaseConnection\DataBaseConnection.h" />
     <ClInclude Include="Network_Controller.h" />
     <ClInclude Include="sha256.h" />
     <ClInclude Include="TCP_Client.h" />
@@ -28,6 +29,7 @@
     <ClInclude Include="UDP_Server.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\DataBaseConnection\DataBaseConnection\DataBaseConnection.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="sha256.cpp" />
     <ClCompile Include="TCP_Client.cpp" />

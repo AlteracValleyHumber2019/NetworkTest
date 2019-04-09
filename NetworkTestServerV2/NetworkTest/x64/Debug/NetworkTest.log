@@ -1,8 +1,9 @@
-﻿  main.cpp
-c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock.h(301): warning C4005: 'INADDR_ANY': macro redefinition
-  c:\users\raksha\documents\github\networktest\networktestserverv2\sdk\sdl_net\include\sdl_net.h(102): note: see previous definition of 'INADDR_ANY'
-c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock.h(303): warning C4005: 'INADDR_BROADCAST': macro redefinition
-  c:\users\raksha\documents\github\networktest\networktestserverv2\sdk\sdl_net\include\sdl_net.h(111): note: see previous definition of 'INADDR_BROADCAST'
-c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock.h(304): warning C4005: 'INADDR_NONE': macro redefinition
-  c:\users\raksha\documents\github\networktest\networktestserverv2\sdk\sdl_net\include\sdl_net.h(105): note: see previous definition of 'INADDR_NONE'
-  NetworkTest.vcxproj -> C:\Users\Raksha\Documents\GitHub\NetworkTest\NetworkTestServerV2\x64\Debug\NetworkTest.exe
+﻿  UDP_Server.cpp
+c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(5): error C2653: 'UDP_Server': is not a class or namespace name
+c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(6): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(7): warning C4508: 'UDP_Server': function should return a value; 'void' return type assumed
+c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(10): error C2523: 'UDP_Server::~UDP_Server': destructor tag mismatch
+c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(10): error C2510: 'UDP_Server': left of '::' must be a class/struct/union
+c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(11): error C2084: function 'int UDP_Server(void)' already has a body
+  c:\users\raksha\documents\github\networktest\networktestserverv2\networktest\udp_server.cpp(5): note: see previous definition of 'UDP_Server'
