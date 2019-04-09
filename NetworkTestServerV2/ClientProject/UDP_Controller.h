@@ -191,11 +191,11 @@ public:
 	}
 
 	//
-	const UDPpacket* recievedData() {
+	const char* recievedData() {
 		// Check to see if there is a packet wauting for us...
 		if (SDLNet_UDP_Recv(ourSocket, packet))
 		{
-			return packet;
+			return reinterpret_cast<char*>(packet->data);
 		}
 
 		return NULL;

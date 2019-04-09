@@ -96,7 +96,7 @@ void TCP_Server::SendMessage(std::string message_)
 	}
 }
 
-int TCP_Server::ReceiveMessage()
+const char* TCP_Server::ReceiveMessage()
 {
 	// Mike: Set the size of the buffer
 	const int bufferSize = 1000;
@@ -122,11 +122,11 @@ int TCP_Server::ReceiveMessage()
 		// Mike: Assign the final character in buffer to 0 which means "end the string"
 		buffer[byteCount] = '\0';
 		std::cout << "Information Received: " << buffer << std::endl;
-		return 1;
+		return buffer;
 	}
 
 	// Mike: If nothing was received, then return 0
-	return 0;
+	return nullptr;
 }
 
 int TCP_Server::UpdateServer()

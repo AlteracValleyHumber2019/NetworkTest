@@ -27,7 +27,7 @@ public:
 	void SendMessage(std::string message_);
 
 	/* Mike: Receive messages to a connected client, will return 0 if no message received and 1 if something is accepted */
-	int ReceiveMessage();
+	const char* ReceiveMessage();
 
 	int UpdateServer();
 

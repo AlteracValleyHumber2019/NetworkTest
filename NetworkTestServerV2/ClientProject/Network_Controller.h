@@ -5,7 +5,6 @@
 #include <iostream>
 #include <cstring>
 
-
 /* Parent class to both UDP and TCP client classes */
 class NetworkController
 {
