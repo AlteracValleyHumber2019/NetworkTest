@@ -23,7 +23,7 @@
     <ProjectGuid>{CE92EC58-D1E6-41DC-95E3-FE0A579612F5}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>DataBaseConnection</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -75,14 +75,14 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\GameDev\SDL2_net-2.0.1\include;C:\GameDev\SDL2-2.0.8\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\GameDev\SDL2_net-2.0.1\include;D:\GameDev\SDL2-2.0.8\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\GameDev\SDL2_net-2.0.1\include;C:\GameDev\SDL2-2.0.8\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\GameDev\SDL2_net-2.0.1\include;D:\GameDev\SDL2-2.0.8\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -108,14 +108,14 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Program Files\MySQL\MySQL Connector C++ 1.1.12\include;C:\Program Files\MySQL\MySQL Server 8.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\MySQL\MySQL Connector C++ 1.1.12\include;C:\Program Files\MySQL\MySQL Server 8.0\include;D:\GameDev\SDL2_net-2.0.1\include;D:\GameDev\SDL2-2.0.8\include;D:\OpenSSL-Win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Program Files\MySQL\MySQL Connector C++ 1.1.12\lib\opt;C:\Program Files\MySQL\MySQL Server 8.0\lib;C:\GameDev\SDL2_net-2.0.1\lib\x64;C:\GameDev\SDL2-2.0.8\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libmysql.lib;mysqlcppconn.lib;SDL2_net.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\MySQL\MySQL Connector C++ 1.1.12\lib\opt;C:\Program Files\MySQL\MySQL Server 8.0\lib;D:\GameDev\SDL2_net-2.0.1\lib\x64;D:\GameDev\SDL2-2.0.8\lib\x64;D:\OpenSSL-Win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libmysql.lib;mysqlcppconn.lib;SDL2_net.lib;SDL2.lib;SDL2main.lib;libssl.lib;libcrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -148,7 +148,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;STATIC_CONCPP;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Program Files\MySQL\MySQL Connector C++ 1.1.12\include;C:\Program Files\MySQL\MySQL Server 8.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\MySQL\MySQL Connector C++ 1.1.12\include;C:\Program Files\MySQL\MySQL Server 8.0\include;D:\GameDev\SDL2_net-2.0.1\include;D:\GameDev\SDL2-2.0.8\include;D:\OpenSSL-Win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -156,8 +156,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Program Files\MySQL\MySQL Connector C++ 1.1.12\lib\opt;C:\Program Files\MySQL\MySQL Server 8.0\lib;C:\GameDev\SDL2_net-2.0.1\lib\x64;C:\GameDev\SDL2-2.0.8\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libmysql.lib;mysqlcppconn.lib;SDL2_net.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\MySQL\MySQL Connector C++ 1.1.12\lib\opt;C:\Program Files\MySQL\MySQL Server 8.0\lib;D:\GameDev\SDL2_net-2.0.1\lib\x64;D:\GameDev\SDL2-2.0.8\lib\x64;D:\OpenSSL-Win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libmysql.lib;mysqlcppconn.lib;SDL2_net.lib;SDL2.lib;SDL2main.lib;libssl.lib;libcrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

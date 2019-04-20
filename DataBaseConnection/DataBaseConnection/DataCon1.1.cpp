@@ -57,7 +57,7 @@ int main()
 			cout << endl;
 
 			//Prints out the query sent to the server for reference purposes
-			string query1 = "SELECT * FROM players WHERE (player_name = '" + user + "') OR (player_email = '" + user + "')";
+			string query1 = "SELECT * FROM users WHERE (username = '" + user + "') OR (email = '" + user + "')";
 			cout << "Query from the server : " + query1 << endl;
 			system("PAUSE");
 
@@ -67,10 +67,12 @@ int main()
 			//row will be FALSE if no result is found
 			if (row = mysql_fetch_row(res))
 			{
+				string original = dbcon.editRetreived(row[3]);
+				string parsed = dbcon.parseHash(pass, row);
 				//We will get only 1 line as a result
 				//Data is stored as... ID, name, pass, email
 				//TODO: Compare the hashed value
-				if (pass == row[2])
+				if (original== parsed)
 				{
 					cout << "Connected to the server succesfully under : " + user + " !" << endl;
 					connected = true;

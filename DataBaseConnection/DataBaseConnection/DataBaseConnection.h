@@ -19,6 +19,9 @@ public:
 
 	MYSQL_RES* fetchInformation(string _query);
 	MYSQL_RES* fetchInformation(char* _query);
+	string parseHash(string password,MYSQL_ROW databasePass);
+	string retreiveKey(string input);
+	string editRetreived(string input);
 	void sendInformation(const char* _query);
 
 	~DataBaseConnection();

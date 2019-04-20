@@ -1,8 +1,8 @@
 ﻿  DataBaseConnection.cpp
-  DataCon1.1.cpp
+d:\_myrepos\networking\databaseconnection\databaseconnection\databaseconnection.cpp(82): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   Generating code
-  15 of 164 functions ( 9.1%) were compiled, the rest were copied from previous compilation.
-    4 functions were new in current compilation
-    46 functions had inline decision re-evaluated but remain unchanged
+  2 of 172 functions ( 1.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  DataBaseConnection.vcxproj -> C:\Users\Raksha\Documents\GitHub\NetworkTest\DataBaseConnection\x64\Release\DataBaseConnection.exe
+  DataBaseConnection.vcxproj -> D:\_MyRepos\Networking\DataBaseConnection\x64\Release\DataBaseConnection.exe
